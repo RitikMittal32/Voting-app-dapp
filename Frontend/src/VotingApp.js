@@ -103,6 +103,26 @@ const VotingApp = () => {
           <li></li>
           <li></li>
         </ul>
+
+      <div className='description'>
+        <h3>Project Description:<br></br>
+        <br></br>
+          
+          In this project If you want to Add Candidate then it uses
+          ADDCANDIDATE link and you need to do payment for the Adding a
+          candidate and If you want to Vote the selected candidate
+          than it uses VOTECANDIDATE link and you need to do payment for 
+          voting the selected candidate.
+         <br></br>
+         <br></br>
+          1. Only one wallet address will pay to cast one vote.
+          <br></br>
+          2. It done all the process successfully but there is the problem is that 
+           one thing is missing in the project which is when you add new cadidate 
+          it added but it does not reflect it in Votecandidate component there is 
+          predefined some candidate will be Shown like BJP,Congress and AAP.
+        </h3>
+      </div>
       
       {activeLink === 'Services' ? (
         

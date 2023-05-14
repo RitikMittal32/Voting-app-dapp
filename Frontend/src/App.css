@@ -289,3 +289,13 @@ input{
   left:1200px;
   bottom: -100px;
 }
+
+.description{
+  border:6px solid #05084D;
+  width:20%;
+  position: absolute;
+  padding: 10px;
+  left:10px;
+  bottom: 10px;
+  background-color: white;
+}
