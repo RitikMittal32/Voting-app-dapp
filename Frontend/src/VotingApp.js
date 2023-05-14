@@ -16,9 +16,10 @@ const VotingApp = () => {
   const [showAddCandidateForm, setShowAddCandidateForm] = useState(false);
   const [activeLink, setActiveLink] = useState('');
   const contractABI = contractabi;
-  const contractAddress = "0xAbb34b4e3daC9DF991Bb345782b5076C9c05bE48";
+  const contractAddress = "0x9523906e5342D67F4A072D22a2746D0c100d6eA8";
   const web3 = new Web3(window.ethereum);
   const contractInstance = new web3.eth.Contract(contractABI, contractAddress);
+ 
 
   const fetchCandidates = async () => {
     try {
@@ -31,26 +32,43 @@ const VotingApp = () => {
 
   useEffect(() => {
     fetchCandidates();
+    fetchVotingResults(); 
   }, []);
 
-  const handleVote = async () => {
+  const handleVote = async (event) => {
+   
+    event.preventDefault();
     try {
       await contractInstance.methods.vote(selectedCandidate).send({ from: window.ethereum.selectedAddress });
+      fetchVotingResults(); // Fetch updated voting results
       setVoted(true);
-      fetchVotingResults();
     } catch (error) {
       console.error(error);
     }
   };
+  
 
-  const fetchVotingResults = async () => {
-    try {
-      const results = await contractInstance.methods.getVotingResults().call();
-      setVotingResults(results);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+
+    const fetchVotingResults = async () => {
+      try {
+        const results = await contractInstance.methods.getVotingResults().call();
+        const ids = results[0];
+        const names = results[1];
+        const voteCounts = results[2];
+        
+        const votingResultsData = ids.map((id, index) => ({
+          candidateId: id,
+          candidateName: names[index],
+          voteCount: voteCounts[index]
+        }));
+    
+        setVotingResults(votingResultsData);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    
+  
 
   const handleAddCandidate = async () => {
     try {
@@ -64,7 +82,7 @@ const VotingApp = () => {
   };
 
   return (
-    <>
+    <div>
       <div className="banner-text">
         <ul>
           <li>
@@ -77,12 +95,11 @@ const VotingApp = () => {
             </Link></li>
         </ul>
       </div>
-
       
       <div className="animation-area">
       {activeLink === 'Services' ? (
         
-          
+        <>
 
           <Services
             candidates={candidates}
@@ -91,7 +108,19 @@ const VotingApp = () => {
             handleVote={handleVote}
             setShowAddCandidateForm={setShowAddCandidateForm}
           />
-    
+         
+          <div className='Result'>
+            <h2>Thank you for voting!</h2>
+            <h3>Voting Results:</h3>
+            <ul>
+              {votingResults.map((result) => (
+                <li key={result.candidateId}>
+                  {result.candidateName}: {result.voteCount}
+                </li>
+              ))}
+            </ul>
+            </div>
+            </>
 
           ):(
           activeLink === 'Home' && (
@@ -106,25 +135,14 @@ const VotingApp = () => {
 
         )
         )}
-    
-          {/* <div>
-            <h2>Thank you for voting!</h2>
-            <h3>Voting Results:</h3>
-            <ul>
-              {votingResults.map((result) => (
-                <li key={result.candidateId}>
-                  {result.candidateName}: {result.voteCount}
-                </li>
-              ))}
-            </ul>
-          </div> */}
+  
 
       </div>
       <div className="App">
         <Voting />
       </div>
 
-    </>
+    </div>
   );
 };
 
