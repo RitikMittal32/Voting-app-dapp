@@ -144,7 +144,7 @@ body{
   height: 100vh;
 }
 
-.box-area{
+/* .box-area{
   position:absolute;
   top:0;
   left: 0;
@@ -219,7 +219,7 @@ body{
     transform: translateY(-800px) rotate(360deg);
     opacity: 0;
   }
-}
+} */
 
 .Candi{
   position: relative;
@@ -230,6 +230,8 @@ body{
 .D{
   position: relative;
   bottom:720px;
+  width:20%;
+  left:600px;
   font-family:cursive;
   color: #13043E ;
 }
