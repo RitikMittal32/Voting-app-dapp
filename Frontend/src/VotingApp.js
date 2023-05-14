@@ -97,6 +97,13 @@ const VotingApp = () => {
       </div>
       
       <div className="animation-area">
+        <ul class="box-area">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      
       {activeLink === 'Services' ? (
         
         <>
@@ -136,8 +143,8 @@ const VotingApp = () => {
         )
         )}
   
-
-      </div>
+      
+    	</div>
       <div className="App">
         <Voting />
       </div>

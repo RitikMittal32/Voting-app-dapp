@@ -56,7 +56,6 @@ ul.voting-results {
 
 /* Radio button styles */
 input[type='radio'] {
- 
   position: relative;
   left:120px;
   bottom: -15px;
@@ -73,35 +72,14 @@ input[type='radio'] {
   bottom:-180px;
   font-weight: bolder;
   font-size: larger;
-  
+  margin-top: 2px;
 }
 
 .candidatename{
   position: relative;
   left: 30px;
   bottom:5px;
- 
-}
-
-
-/* .moving-background {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-image: url('path/to/background-image.jpg');
-  animation: moveBackground 20s linear infinite;
-} */
-
-@keyframes moveBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
+  cursor: pointer;
 }
 
 *{
@@ -115,7 +93,8 @@ body{
 
 .banner-text{
   width:100%;
-  position:absolute;
+  position: absolute;
+  z-index: 1;
 }
 
 .banner-text ul{
@@ -129,27 +108,25 @@ body{
   text-transform: uppercase;
   color: #fff;
   font-size: 20px;
+  position: relative;
+  z-index: 2;
+  bottom: -30px;
 }
 
-.banner-text h2{
-  text-align: center;
-  color: #fff;
-  font-size: 50px;
-  margin-top:20%;
-}
 
 .animation-area{
   background: linear-gradient(to left, #8942a8, #ba382f);
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
-/* .box-area{
-  position:absolute;
+.box-area{
+  position:fixed;
   top:0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:100%;
   overflow: hidden;
 }
 
@@ -219,7 +196,7 @@ body{
     transform: translateY(-800px) rotate(360deg);
     opacity: 0;
   }
-} */
+}
 
 .Candi{
   position: relative;
@@ -232,7 +209,7 @@ body{
 
 .D{
   position: relative;
-  bottom:720px;
+  bottom:700px;
   width:20%;
   left:600px;
   font-family:cursive;
@@ -241,7 +218,7 @@ body{
 
 .Metamask-button{
   position: relative;
-  bottom:750px;
+  bottom:730px;
   right:630px;
   border:4px solid black;
   padding: 15px;
@@ -249,7 +226,7 @@ body{
 
 #address-display{
   position: relative;
-  bottom:740px;
+  bottom:720px;
   background-color:lightblue;
   width: 30%;
   left: 25px;

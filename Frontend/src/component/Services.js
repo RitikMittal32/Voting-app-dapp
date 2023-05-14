@@ -5,12 +5,14 @@ import VoteButton from './VoteButton';
 const Services = ({ candidates, selectedCandidate, setSelectedCandidate, handleVote }) => {
   return (
     <>
+      
       <CandidateList
         candidates={candidates}
         selectedCandidate={selectedCandidate}
         setSelectedCandidate={setSelectedCandidate}
       />
       <VoteButton handleVote={handleVote} />
+
     </>
   );
 };

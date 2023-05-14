@@ -18,18 +18,20 @@ const Home = ({candidate, handleAddCandidate, showAddCandidateForm, setShowAddCa
 
   return (
     <>
-      <div className="addcandidateform">
-        <h2 className="AddC">Add a Candidate</h2>
-        <input
-          type="text"
-          value={newCandidateName}
-          onChange={handleInputChange}
-          placeholder="Enter candidate name"
-        />
-      </div>
-      <button onClick={handleSubmit} className="submit">
-        Submit
-      </button>
+      
+        <div className="addcandidateform">
+          <h2 className="AddC">Add a Candidate</h2>
+          <input
+            type="text"
+            value={newCandidateName}
+            onChange={handleInputChange}
+            placeholder="Enter candidate name"
+          />
+        </div>
+        <button onClick={handleSubmit} className="submit">
+          Submit
+        </button>
+    
     </>
   );
 };
