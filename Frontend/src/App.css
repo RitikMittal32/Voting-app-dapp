@@ -1,0 +1,301 @@
+/* App container styles */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+/* Candidate list styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Vote button styles */
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #05084D;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  bottom:-300px;
+}
+
+/* Voting results styles */
+ul.voting-results {
+  list-style-type: none;
+  padding: 0;
+}
+
+.voting-results li {
+  margin-bottom: 5px;
+}
+
+/* Radio button styles */
+input[type='radio'] {
+ 
+  position: relative;
+  left:120px;
+  bottom: -15px;
+  margin-right: 20px;
+}
+
+.Candiform{
+  border: 4px solid #05084D;
+  width:20%;
+  background-color:antiquewhite ;
+  font-weight: bolder;
+  position: relative;
+  left:600px;
+  bottom:-180px;
+  font-weight: bolder;
+  font-size: larger;
+  
+}
+
+.candidatename{
+  position: relative;
+  left: 30px;
+  bottom:5px;
+ 
+}
+
+
+/* .moving-background {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url('path/to/background-image.jpg');
+  animation: moveBackground 20s linear infinite;
+} */
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: Baloo;
+}
+
+.banner-text{
+  width:100%;
+  position:absolute;
+}
+
+.banner-text ul{
+  height: 50px;
+  float: right;
+}
+
+.banner-text ul li{
+  display: inline-block;
+  padding: 40px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+}
+
+.banner-text h2{
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  margin-top:20%;
+}
+
+.animation-area{
+  background: linear-gradient(to left, #8942a8, #ba382f);
+  width: 100%;
+  height: 100vh;
+}
+
+.box-area{
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.box-area li{
+  position: absolute;
+  display:block;
+  list-style:none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255,255,255,0.2);
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+}
+
+.box-area li:nth-child(1){
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(2){
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+
+.box-area li:nth-child(3){
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(4){
+  left: 42%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+
+.box-area li:nth-child(5){
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(6){
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+
+
+@keyframes animate{
+  0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.Candi{
+  position: relative;
+  bottom: -150px;
+  left: 670px;
+}
+
+.D{
+  position: relative;
+  bottom:720px;
+  font-family:cursive;
+  color: #13043E ;
+}
+
+.Metamask-button{
+  position: relative;
+  bottom:750px;
+  right:630px;
+  border:4px solid black;
+  padding: 15px;
+}
+
+#address-display{
+  position: relative;
+  bottom:740px;
+  background-color:lightblue;
+  width: 30%;
+  left: 25px;
+  border: 6px solid #05084D;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.addcandidate{
+  margin: 6px;
+  position: relative;
+  left:690px;
+  bottom:-160px;
+}
+.addcandidateform{
+
+  position: relative;
+  justify-content: space-between;
+  left:460px; 
+  bottom: -260px;
+  border: 4px solid #05084D;
+  width:40%;
+  border-radius: 10px;
+  padding: 2px;
+
+}
+input{
+
+  padding: 4px;
+  width:90%;
+  font-weight: bold;
+  position: relative;
+  left: 20px;
+
+}
+
+.submit{
+  position: relative;
+  bottom:-270px;
+}
+
+.AddC{
+  color: #05084D;
+  font-weight: bold;
+  font-family:cursive;
+  position:relative;
+  left:185px;
+}
+
+.vote-button{
+  position: relative;
+  bottom: 100px;
+}
+
