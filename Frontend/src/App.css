@@ -89,6 +89,7 @@ input[type='radio'] {
 
 body{
   font-family: Baloo;
+  overflow-y: hidden;
 }
 
 .banner-text{
