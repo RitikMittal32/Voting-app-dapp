@@ -16,7 +16,7 @@ const VotingApp = () => {
   const [showAddCandidateForm, setShowAddCandidateForm] = useState(false);
   const [activeLink, setActiveLink] = useState('');
   const contractABI = contractabi;
-  const contractAddress = "0x9523906e5342D67F4A072D22a2746D0c100d6eA8";
+  const contractAddress = "0x00c055D7034022A6c7E71f09EE252060442Fcd0a";
   const web3 = new Web3(window.ethereum);
   const contractInstance = new web3.eth.Contract(contractABI, contractAddress);
  
